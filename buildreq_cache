@@ -1,0 +1,8 @@
+2.8.0
+pkgconfig(jack)
+pkgconfig(libavcodec)
+pkgconfig(libavformat)
+pkgconfig(libroar)
+pkgconfig(libsystemd)
+pkgconfig(opusfile)
+pkgconfig(samplerate)

@@ -1,0 +1,15 @@
+libasound.so.2
+libavcodec.so.58
+libavformat.so.58
+libc.so.6
+libdl.so.2
+libjack.so.0
+libm.so.6
+libncursesw.so.6
+libopusfile.so.0
+libpthread.so.0
+libpulse.so.0
+libsamplerate.so.0
+libswresample.so.3
+libsystemd.so.0
+libtinfow.so.6
