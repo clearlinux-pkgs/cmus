@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.8.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/cmus/cmus/archive/v2.8.0.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.8.0.tar.gz
 Summary  : No detailed summary available
@@ -93,13 +93,13 @@ man components for the cmus package.
 
 %build
 ## build_prepend content
-./configure prefix=/usr
+./configure prefix=/usr libdir=/usr/lib64
 ## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568829438
+export SOURCE_DATE_EPOCH=1568829569
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -112,7 +112,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1568829438
+export SOURCE_DATE_EPOCH=1568829569
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmus
 cp COPYING %{buildroot}/usr/share/package-licenses/cmus/COPYING
@@ -150,18 +150,18 @@ cp COPYING %{buildroot}/usr/share/package-licenses/cmus/COPYING
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/cmus/ip/cue.so
-/usr/lib/cmus/ip/ffmpeg.so
-/usr/lib/cmus/ip/flac.so
-/usr/lib/cmus/ip/modplug.so
-/usr/lib/cmus/ip/opus.so
-/usr/lib/cmus/ip/vorbis.so
-/usr/lib/cmus/ip/wav.so
-/usr/lib/cmus/ip/wavpack.so
-/usr/lib/cmus/op/alsa.so
-/usr/lib/cmus/op/jack.so
-/usr/lib/cmus/op/oss.so
-/usr/lib/cmus/op/pulse.so
+/usr/lib64/cmus/ip/cue.so
+/usr/lib64/cmus/ip/ffmpeg.so
+/usr/lib64/cmus/ip/flac.so
+/usr/lib64/cmus/ip/modplug.so
+/usr/lib64/cmus/ip/opus.so
+/usr/lib64/cmus/ip/vorbis.so
+/usr/lib64/cmus/ip/wav.so
+/usr/lib64/cmus/ip/wavpack.so
+/usr/lib64/cmus/op/alsa.so
+/usr/lib64/cmus/op/jack.so
+/usr/lib64/cmus/op/oss.so
+/usr/lib64/cmus/op/pulse.so
 
 %files license
 %defattr(0644,root,root,0755)
