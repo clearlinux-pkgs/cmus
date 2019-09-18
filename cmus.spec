@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.8.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/cmus/cmus/archive/v2.8.0.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.8.0.tar.gz
 Summary  : No detailed summary available
@@ -17,13 +17,18 @@ Requires: cmus-license = %{version}-%{release}
 Requires: cmus-man = %{version}-%{release}
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(alsa)
+BuildRequires : pkgconfig(flac)
 BuildRequires : pkgconfig(jack)
 BuildRequires : pkgconfig(libavcodec)
 BuildRequires : pkgconfig(libavformat)
+BuildRequires : pkgconfig(libcdio)
+BuildRequires : pkgconfig(libmodplug)
 BuildRequires : pkgconfig(libpulse)
 BuildRequires : pkgconfig(libsystemd)
 BuildRequires : pkgconfig(opusfile)
 BuildRequires : pkgconfig(samplerate)
+BuildRequires : pkgconfig(vorbis)
+BuildRequires : pkgconfig(wavpack)
 
 %description
 _cmus (originally _cmus_remote)
@@ -94,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568829086
+export SOURCE_DATE_EPOCH=1568829438
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +112,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1568829086
+export SOURCE_DATE_EPOCH=1568829438
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmus
 cp COPYING %{buildroot}/usr/share/package-licenses/cmus/COPYING
@@ -147,8 +152,12 @@ cp COPYING %{buildroot}/usr/share/package-licenses/cmus/COPYING
 %defattr(-,root,root,-)
 /usr/lib/cmus/ip/cue.so
 /usr/lib/cmus/ip/ffmpeg.so
+/usr/lib/cmus/ip/flac.so
+/usr/lib/cmus/ip/modplug.so
 /usr/lib/cmus/ip/opus.so
+/usr/lib/cmus/ip/vorbis.so
 /usr/lib/cmus/ip/wav.so
+/usr/lib/cmus/ip/wavpack.so
 /usr/lib/cmus/op/alsa.so
 /usr/lib/cmus/op/jack.so
 /usr/lib/cmus/op/oss.so

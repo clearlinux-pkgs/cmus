@@ -3,18 +3,10 @@ Configure miss: CDDB_LIBS (pkg-config)
 Configure miss: CDDB_LIBS (-lcddb)
 Configure miss: CDIO_LIBS (pkg-config)
 Configure miss: CDIO_LIBS (-lcdio_cdio -lcdio -lm)
-Configure miss: FLAC_LIBS (pkg-config)
-Configure miss: FLAC_LIBS (-lFLAC -lm)
 Configure miss: MAD_LIBS (pkg-config)
 Configure miss: MAD_LIBS (-lmad -lm)
-Configure miss: MODPLUG_LIBS (pkg-config)
-Configure miss: MODPLUG_LIBS (-lmodplug -lstdc++ -lm)
 Configure miss: header <mpc/mpcdec.h>
 Configure miss: header <mpcdec/mpcdec.h>
-Configure miss: VORBIS_LIBS (pkg-config)
-Configure miss: VORBIS_LIBS (-lvorbisfile -lvorbis -lm -logg)
-Configure miss: WAVPACK_LIBS (pkg-config)
-Configure miss: WAVPACK_LIBS (-lwavpack)
 Configure miss: header <mp4v2/mp4v2.h>
 Configure miss: header <mp4.h>
 Configure miss: header <neaacdec.h>

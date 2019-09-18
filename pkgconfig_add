@@ -2,3 +2,10 @@
 # not get picked up automatically. One name per line, no whitespace.
 libpulse
 alsa
+libcdio
+flac
+libmodplug
+samplerate
+vorbis
+opusfile
+wavpack
