@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.9.1
-Release  : 6
+Release  : 7
 URL      : https://github.com/cmus/cmus/archive/v2.9.1/cmus-2.9.1.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.9.1/cmus-2.9.1.tar.gz
 Summary  : A small, fast and powerful console music player.
@@ -117,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1646327605
+export SOURCE_DATE_EPOCH=1656011462
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -152,7 +152,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1646327605
+export SOURCE_DATE_EPOCH=1656011462
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmus
 cp %{_builddir}/cmus-2.9.1/COPYING %{buildroot}/usr/share/package-licenses/cmus/4cc77b90af91e615a64ae04893fdffa7939db84c
@@ -163,8 +163,8 @@ pushd ../buildavx512/
 %make_install_v4
 popd
 %make_install
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
-/usr/bin/elf-move.py avx512 %{buildroot}-v4 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx512 %{buildroot}-v4 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -217,7 +217,30 @@ popd
 /usr/lib64/cmus/op/jack.so
 /usr/lib64/cmus/op/oss.so
 /usr/lib64/cmus/op/pulse.so
-/usr/share/clear/optimized-elf/lib*
+/usr/lib64/glibc-hwcaps/x86-64-v3/alsa.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/cue.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/ffmpeg.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/flac.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/jack.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/modplug.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/opus.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/oss.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/pulse.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/vorbis.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/wav.so
+/usr/lib64/glibc-hwcaps/x86-64-v3/wavpack.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/alsa.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/cue.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/ffmpeg.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/flac.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/jack.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/modplug.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/opus.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/oss.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/pulse.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/vorbis.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/wav.so
+/usr/lib64/glibc-hwcaps/x86-64-v4/wavpack.so
 
 %files license
 %defattr(0644,root,root,0755)
