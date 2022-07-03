@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.9.1
-Release  : 8
+Release  : 9
 URL      : https://github.com/cmus/cmus/archive/v2.9.1/cmus-2.9.1.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.9.1/cmus-2.9.1.tar.gz
 Summary  : A small, fast and powerful console music player.
@@ -217,6 +217,7 @@ popd
 /usr/lib64/cmus/op/jack.so
 /usr/lib64/cmus/op/oss.so
 /usr/lib64/cmus/op/pulse.so
+/usr/share/clear/optimized-elf/other*
 
 %files license
 %defattr(0644,root,root,0755)
