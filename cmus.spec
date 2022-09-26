@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.10.0
-Release  : 16
+Release  : 17
 URL      : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Summary  : A small, fast and powerful console music player.
