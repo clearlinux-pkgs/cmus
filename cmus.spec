@@ -4,7 +4,7 @@
 #
 Name     : cmus
 Version  : 2.10.0
-Release  : 18
+Release  : 19
 URL      : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Summary  : A small, fast and powerful console music player.
@@ -117,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1657114654
+export SOURCE_DATE_EPOCH=1667420803
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -143,19 +143,19 @@ pushd ../buildavx512
 ## build_prepend content
 ./configure prefix=/usr libdir=/usr/lib64
 ## build_prepend end
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=256 -Wl,-z,x86-64-v4"
-export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=256 -Wl,-z,x86-64-v4"
-export FFLAGS="$FFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=256 -Wl,-z,x86-64-v4"
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=512 -Wl,-z,x86-64-v4 -mtune=sapphirerapids "
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=512 -Wl,-z,x86-64-v4 -mtune=sapphirerapids "
+export FFLAGS="$FFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=512 -Wl,-z,x86-64-v4"
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v4 -mprefer-vector-width=256"
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v4"
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1657114654
+export SOURCE_DATE_EPOCH=1667420803
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmus
-cp %{_builddir}/cmus-2.10.0/COPYING %{buildroot}/usr/share/package-licenses/cmus/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/cmus-%{version}/COPYING %{buildroot}/usr/share/package-licenses/cmus/4cc77b90af91e615a64ae04893fdffa7939db84c || :
 pushd ../buildavx2/
 %make_install_v3
 popd
