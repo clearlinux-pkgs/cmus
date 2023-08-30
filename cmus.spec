@@ -5,7 +5,7 @@
 #
 Name     : cmus
 Version  : 2.10.0
-Release  : 29
+Release  : 30
 URL      : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Source0  : https://github.com/cmus/cmus/archive/v2.10.0/cmus-2.10.0.tar.gz
 Summary  : A small, fast and powerful console music player.
@@ -110,7 +110,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689794432
+export SOURCE_DATE_EPOCH=1693409345
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -145,7 +145,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1689794432
+export SOURCE_DATE_EPOCH=1693409345
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cmus
 cp %{_builddir}/cmus-%{version}/COPYING %{buildroot}/usr/share/package-licenses/cmus/4cc77b90af91e615a64ae04893fdffa7939db84c || :
@@ -199,7 +199,6 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/cmus/ip/cue.so
-/V3/usr/lib64/cmus/ip/ffmpeg.so
 /V3/usr/lib64/cmus/ip/flac.so
 /V3/usr/lib64/cmus/ip/modplug.so
 /V3/usr/lib64/cmus/ip/opus.so
@@ -211,7 +210,6 @@ popd
 /V3/usr/lib64/cmus/op/oss.so
 /V3/usr/lib64/cmus/op/pulse.so
 /V4/usr/lib64/cmus/ip/cue.so
-/V4/usr/lib64/cmus/ip/ffmpeg.so
 /V4/usr/lib64/cmus/ip/flac.so
 /V4/usr/lib64/cmus/ip/modplug.so
 /V4/usr/lib64/cmus/ip/opus.so
@@ -223,7 +221,6 @@ popd
 /V4/usr/lib64/cmus/op/oss.so
 /V4/usr/lib64/cmus/op/pulse.so
 /usr/lib64/cmus/ip/cue.so
-/usr/lib64/cmus/ip/ffmpeg.so
 /usr/lib64/cmus/ip/flac.so
 /usr/lib64/cmus/ip/modplug.so
 /usr/lib64/cmus/ip/opus.so
