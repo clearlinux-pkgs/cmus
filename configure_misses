@@ -55,3 +55,6 @@ Configure miss: header <sys/audioio.h>
 Configure miss: program artsc-config
 Configure miss: program artsc-config
 Configure miss: program artsc-config
+Configure miss: successful build of ffmpeg.c
+Configure miss: successful build of ffmpeg.c
+Configure miss: successful build of ffmpeg.c
