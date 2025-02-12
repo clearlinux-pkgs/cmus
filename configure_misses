@@ -1,3 +1,9 @@
+Configure miss: AAC_LIBS (-lfaad -lm)
+Configure miss: AAC_LIBS (-lfaad -lm)
+Configure miss: AAC_LIBS (-lfaad -lm)
+Configure miss: AAC_LIBS (pkg-config)
+Configure miss: AAC_LIBS (pkg-config)
+Configure miss: AAC_LIBS (pkg-config)
 Configure miss: AO_LIBS (-lao)
 Configure miss: AO_LIBS (-lao)
 Configure miss: AO_LIBS (-lao)
@@ -25,36 +31,33 @@ Configure miss: MAD_LIBS (-lmad -lm)
 Configure miss: MAD_LIBS (pkg-config)
 Configure miss: MAD_LIBS (pkg-config)
 Configure miss: MAD_LIBS (pkg-config)
+Configure miss: MP4_LIBS (-lmp4v2 -lfaad -lm)
+Configure miss: MP4_LIBS (-lmp4v2 -lfaad -lm)
+Configure miss: MP4_LIBS (-lmp4v2 -lfaad -lm)
+Configure miss: MP4_LIBS (pkg-config)
+Configure miss: MP4_LIBS (pkg-config)
+Configure miss: MP4_LIBS (pkg-config)
 Configure miss: ROAR_LIBS (pkg-config)
 Configure miss: ROAR_LIBS (pkg-config)
 Configure miss: ROAR_LIBS (pkg-config)
 Configure miss: SNDIO_LIBS (-lsndio)
 Configure miss: SNDIO_LIBS (-lsndio)
 Configure miss: SNDIO_LIBS (-lsndio)
+Configure miss: header <aaudio/AAudio.h>
+Configure miss: header <aaudio/AAudio.h>
+Configure miss: header <aaudio/AAudio.h>
 Configure miss: header <ayemu.h>
 Configure miss: header <ayemu.h>
 Configure miss: header <ayemu.h>
-Configure miss: header <mp4.h>
-Configure miss: header <mp4.h>
-Configure miss: header <mp4.h>
-Configure miss: header <mp4v2/mp4v2.h>
-Configure miss: header <mp4v2/mp4v2.h>
-Configure miss: header <mp4v2/mp4v2.h>
 Configure miss: header <mpc/mpcdec.h>
 Configure miss: header <mpc/mpcdec.h>
 Configure miss: header <mpc/mpcdec.h>
 Configure miss: header <mpcdec/mpcdec.h>
 Configure miss: header <mpcdec/mpcdec.h>
 Configure miss: header <mpcdec/mpcdec.h>
-Configure miss: header <neaacdec.h>
-Configure miss: header <neaacdec.h>
-Configure miss: header <neaacdec.h>
 Configure miss: header <sys/audioio.h>
 Configure miss: header <sys/audioio.h>
 Configure miss: header <sys/audioio.h>
 Configure miss: program artsc-config
 Configure miss: program artsc-config
 Configure miss: program artsc-config
-Configure miss: successful build of ffmpeg.c
-Configure miss: successful build of ffmpeg.c
-Configure miss: successful build of ffmpeg.c
